@@ -1,34 +1,29 @@
-# Load data from a CSV file named 'input.csv' into a variable called 'data'
+# Load data from a CSV file named 'input.csv'
 data <- read.csv("input.csv")
 
-# Print the entire data frame to the console
+# Print the entire data frame
+print("Data:")
 print(data)
 
-# Check if the variable 'data' is a data frame
-print(is.data.frame(data))
+# Check if 'data' is a data frame
+cat("Is 'data' a data frame?:", is.data.frame(data), "\n")
 
-# Print the number of columns in the data frame
-print(ncol(data))
+# Print the number of columns and rows
+cat("Number of columns:", ncol(data), "\n")
+cat("Number of rows:", nrow(data), "\n")
 
-# Print the number of rows in the data frame
-print(nrow(data))
-
-# Find and print the maximum salary in the 'salary' column
+# Calculate and print the maximum salary
 sal <- max(data$salary)
-print(sal)
+cat("Maximum Salary:", sal, "\n")
 
-# Alternatively (redundantly), find and print the maximum salary again
-maxcost <- max(data$salary)
-print(maxcost)
+# Calculate and print the minimum salary
+min_salary <- min(data$salary)
+cat("Minimum Salary:", min_salary, "\n")
 
-# Find and print the minimum salary in the 'salary' column
-agemin <- min(data$salary)
-print(agemin)
+# Calculate and print the median salary
+median_salary <- median(data$salary)
+cat("Median Salary:", median_salary, "\n")
 
-# Find and print the median salary in the 'salary' column
-agemedian <- median(data$salary)
-print(agemedian)
-
-# Find and print the mean (average) salary in the 'salary' column
-agemean <- mean(data$salary)
-print(agemean)
+# Calculate and print the mean (average) salary
+mean_salary <- mean(data$salary)
+cat("Mean Salary:", mean_salary, "\n")
