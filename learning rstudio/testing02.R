@@ -15,3 +15,44 @@ print(mean(data1$ageOFocc))
 
 # Print a summary of the "ageOFocc" column (includes Min, 1st Qu., Median, Mean, 3rd Qu., Max)
 print(summary(data1$ageOFocc))
+
+find_mode <- function(x) {
+  u <- unique(x)
+  tab <- tabulate(match(x, u))
+  u[tab == max(tab)]
+}
+find_mode(data1$ageOFocc)
+
+find_mode(data1$weight)
+
+data <- c('Sunny','Cloudy','Sunny','Sunny','Rainy','Cloudy')
+find_mode(data)
+
+data1 <- read.csv("AccFat_Info.csv")
+find_mode(data1$ageOFocc)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

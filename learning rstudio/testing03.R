@@ -1,3 +1,1 @@
-data2<- read.csv("economic_status.csv")
-
-print(data2)
+data3<- read.csv("economic_status.csv")

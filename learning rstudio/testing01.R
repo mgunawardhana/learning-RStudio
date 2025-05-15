@@ -57,6 +57,16 @@ find_mode <- function(x) {
 find_mode(data$salary)
 
 
+retval <- subset(data, salary == max(salary))
+print(retval)
+
+print(subset( data, dept == "IT"))
+
+print(subset(data, salary > 600 & dept == "IT"))
+
+print(subset(data, as.Date(start_date) > as.Date("2014-01-01")))
+
+
 
 
 
